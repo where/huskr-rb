@@ -1,3 +1,3 @@
 class Status < ActiveRecord::Base
-  # attr_accessible :title, :body
+  validates :title, :presence => true, :length => {:maximum => 140 }
 end
