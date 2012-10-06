@@ -13,6 +13,7 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'shoulda'
 end

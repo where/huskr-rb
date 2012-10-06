@@ -8,4 +8,8 @@ class StatusesController < ApplicationController
       render :json => {:errors => status.errors}, :status => :unprocessable_entity
     end
   end
+
+  def index
+    render :json => Status.all
+  end
 end

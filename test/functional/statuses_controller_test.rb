@@ -37,4 +37,17 @@ class StatusesControllerTest < ActionController::TestCase
     }
     assert_equal expected, json_resp
   end
+
+
+  test "index" do
+    status1 = FactoryGirl.create(:status)
+    status2 = FactoryGirl.create(:status)
+
+    get :index, :api_version => 1, :format => :json
+
+    assert_response :success
+
+    expected = [status1.as_json, status2.as_json]
+    assert_equal expected.to_json, json_resp.to_json
+  end
 end
