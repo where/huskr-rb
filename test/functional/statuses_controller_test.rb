@@ -47,7 +47,7 @@ class StatusesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected = [status1.as_json, status2.as_json]
+    expected = [status2.as_json, status1.as_json]
     assert_equal expected.to_json, json_resp.to_json
   end
 end

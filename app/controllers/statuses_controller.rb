@@ -10,6 +10,6 @@ class StatusesController < ApplicationController
   end
 
   def index
-    render :json => Status.all
+    render :json => Status.descending
   end
 end
