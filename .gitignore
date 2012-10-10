@@ -20,3 +20,6 @@
 .swo
 *.swn
 *.swm
+
+# We don't want to commit our vagrant file
+.vagrant
